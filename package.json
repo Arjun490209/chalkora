@@ -1,0 +1,46 @@
+{
+  "name": "chalkora",
+  "version": "1.0.2",
+  "description": "A colorful and lightweight terminal logger for Node.js with icons, timestamps, and custom prefixes.",
+  "license": "MIT",
+  "author": "Arjun Prjapati <arjun.prajapati.stack@gmail.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "chalkora",
+    "logger",
+    "logging",
+    "console",
+    "terminal",
+    "chalk",
+    "typescript",
+    "cli",
+    "colorful-logger"
+  ],
+  "dependencies": {
+    "chalk": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^5.8.3"
+  }
+}
